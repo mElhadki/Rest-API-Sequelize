@@ -14,5 +14,5 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelizeConn;
 db.books = require("./books.model.js")(sequelizeConn, Sequelize);
-
+db.users = require("./user.model.js")(sequelizeConn, Sequelize);
 module.exports = db;

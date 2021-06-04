@@ -16,8 +16,10 @@ app.get("/", (req, res) => {
 });
 
 var booksRouter = require("./app/routes/book.routes");
+var usersRouter = require("./app/routes/user.routes");
 
 app.use("/api/books/", booksRouter);
+app.use("/api/users/", usersRouter);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
